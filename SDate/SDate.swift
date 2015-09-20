@@ -13,6 +13,12 @@ extension tm{
         var d1 = timegm(&self)
         self = gmtime(&d1).memory
     }
+    
+    var secondsSince1970:Int {
+        var temp = self
+        return timegm(&temp)
+    }
+    
 }
 
 
@@ -136,5 +142,21 @@ extension SDate{
             
         } else { return nil }
     }
+}
+
+extension SDate{
+    
+    var secondsSince1970:Int{
+        return tmDateBacking.secondsSince1970
+    }
+    
+    func dateByAddingDays(days:Int) -> SDate {
+        return dateByAddingSeconds(24 * 60 * 60 * days )
+    }
+    
+    func compareCurrentDate(with:SDate) -> Double {
+        return difftime(self.tmDateBacking.secondsSince1970, with.tmDateBacking.secondsSince1970)
+    }
+    
 }
 
