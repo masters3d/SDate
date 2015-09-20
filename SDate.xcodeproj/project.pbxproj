@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9D6168EB1BAE292200DF46C1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6168EA1BAE292200DF46C1 /* main.swift */; };
-		9D6168F21BAE29C200DF46C1 /* SDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6168F11BAE29C200DF46C1 /* SDate.swift */; settings = {ASSET_TAGS = (); }; };
 		9D6168FA1BAE2A1F00DF46C1 /* testSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6168F91BAE2A1F00DF46C1 /* testSDate.swift */; };
+		9D6168FF1BAE616D00DF46C1 /* SDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6168F11BAE29C200DF46C1 /* SDate.swift */; settings = {ASSET_TAGS = (); }; };
+		9D6169001BAE652B00DF46C1 /* SDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6168F11BAE29C200DF46C1 /* SDate.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -175,7 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D6168EB1BAE292200DF46C1 /* main.swift in Sources */,
-				9D6168F21BAE29C200DF46C1 /* SDate.swift in Sources */,
+				9D6169001BAE652B00DF46C1 /* SDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D6168FA1BAE2A1F00DF46C1 /* testSDate.swift in Sources */,
+				9D6168FF1BAE616D00DF46C1 /* SDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

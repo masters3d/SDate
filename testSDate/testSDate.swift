@@ -8,28 +8,28 @@
 
 import XCTest
 
-class testSDate: XCTestCase {
+class AddingSecondsTest: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func test1 () {
+        let gs = SDate(fromString: "2011-04-25T00:00:00")?.dateByAddingSeconds(1_000_000_000).description
+        XCTAssertEqual("2043-01-01T01:46:40", gs)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func test2 () {
+        let gs = SDate(fromString: "1977-06-13T00:00:00")?.dateByAddingSeconds(1_000_000_000).description
+        XCTAssertEqual("2009-02-19T01:46:40", gs)
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func test3 () {
+        let gs = SDate(fromString: "1959-07-19T00:00:00")?.dateByAddingSeconds(1_000_000_000).description
+        XCTAssertEqual("1991-03-27T01:46:40", gs)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+    func testTimeWithSeconds () {
+        let gs = SDate(fromString: "1959-07-19T23:59:59")?.dateByAddingSeconds(1_000_000_000).description
+        XCTAssertEqual("1991-03-28T01:46:39", gs)
     }
     
 }
+
+
