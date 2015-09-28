@@ -14,7 +14,7 @@ extension tm{
         self = gmtime(&d1).memory
     }
     
-    var secondsSince1970:Int {
+    var secondsSince1970:time_t {
         var temp = self
         return timegm(&temp)
     }
@@ -147,7 +147,7 @@ extension SDate{
 extension SDate{
     
     var secondsSince1970:Int{
-        return tmDateBacking.secondsSince1970
+        return Int(tmDateBacking.secondsSince1970)
     }
     
     func dateByAddingDays(days:Int) -> SDate {
@@ -157,6 +157,21 @@ extension SDate{
     func compareCurrentDate(with:SDate) -> Double {
         return difftime(self.tmDateBacking.secondsSince1970, with.tmDateBacking.secondsSince1970)
     }
+    
+}
+
+extension SDate{
+    
+    static func distantFuture() -> SDate{
+        // To Match NSDate 4001-01-01 00:00:00 +0000
+        return SDate(year: 4001, month: 01, day: 01, hour: 0, mins: 0, secs: 0)
+    }
+    
+//    This is broken as it only return -1
+//    static func distantPast() ->SDate{
+//        // To Match NSDate 0000-12-30 00:00:00 +0000
+//        return SDate(year: 0, month: 12, day: 30, hour: 0, mins: 0, secs: 0)
+//    }
     
 }
 
