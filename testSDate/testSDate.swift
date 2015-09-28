@@ -50,7 +50,7 @@ class SDateTest: XCTestCase {
     }
     
     func testDistantFuture(){
-        XCTAssertEqual(Double(NSDate.distantFuture().timeIntervalSince1970) , SDate.distantFuture().secondsSince1970)
+        XCTAssertEqual(Int(NSDate.distantFuture().timeIntervalSince1970) , SDate.distantFuture().secondsSince1970)
 
     }
     

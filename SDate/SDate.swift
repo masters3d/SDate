@@ -18,7 +18,6 @@ extension tm{
         var temp = self
         return timegm(&temp)
     }
-    
 }
 
 
@@ -167,7 +166,7 @@ extension SDate{
         return SDate(year: 4001, month: 01, day: 01, hour: 0, mins: 0, secs: 0)
     }
     
-//    This is broken as it only return -1
+//    This is broken as it only returns -1
 //    static func distantPast() ->SDate{
 //        // To Match NSDate 0000-12-30 00:00:00 +0000
 //        return SDate(year: 0, month: 12, day: 30, hour: 0, mins: 0, secs: 0)
